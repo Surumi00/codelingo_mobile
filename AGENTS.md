@@ -15,8 +15,9 @@ Use `bunx` instead of `npx` if the project uses bun (`bun.lock` present).
 ```bash
 npx expo install <package>  # ALWAYS use instead of npm/yarn/pnpm/bun add — resolves SDK-compatible versions
 npx expo start              # start the dev server
-npx expo lint               # lint
+npx expo lint               # lint (ESLint + Prettier)
 npx tsc --noEmit            # typecheck
+npx prettier --write .      # format
 npx expo-doctor             # diagnose dependency and config issues
 npx expo install --fix      # fix incompatible package versions
 ```
@@ -25,9 +26,15 @@ Run lint and typecheck before declaring any task done.
 
 ## Navigation & Routing
 
-- Use **Expo Router** for all navigation. Routes live in `src/app/` — every file there is a screen, `_layout.tsx` files define navigators. Keep non-route code (components, hooks, utils) outside `src/app/`.
-- Import `Link`, `router`, and `useLocalSearchParams` from `expo-router`.
-- Docs: https://docs.expo.dev/router/introduction.md
+- Use **React Navigation** (`@react-navigation/native` + `@react-navigation/native-stack`) with `NavigationContainer` and a native stack navigator. The entry point is `App.tsx`.
+- Screens live inside their feature folder (`src/features/<feature>/components/`); `App.tsx` only wires navigators together.
+- Docs: https://reactnavigation.org/docs/getting-started
+
+## Conventions
+
+- **File and folder names are kebab-case** (`placeholder-screen.tsx`, not `PlaceholderScreen.tsx`). React component names inside files stay PascalCase.
+- Import shared code with the `@/` alias (mapped to `src/` in `tsconfig.json`), e.g. `import { PlaceholderScreen } from '@/components/placeholder-screen'`.
+- Feature-first layout: real logic lives in `src/features/<feature>/` and is re-exported through that feature's `index.ts`. Only promote code to `src/components`, `src/api`, or `src/theme` once a second feature needs it.
 
 ## Building with EAS
 
