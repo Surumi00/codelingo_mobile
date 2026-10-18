@@ -1,5 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import { colors, fontSizes, spacing } from "@/theme";
+
 export function PlaceholderScreen() {
   return (
     <View style={styles.container}>
@@ -16,16 +18,18 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    gap: 8,
-    padding: 24,
+    gap: spacing.sm,
+    padding: spacing.xl,
+    backgroundColor: colors.bg,
   },
   title: {
-    fontSize: 28,
+    color: colors.textStrong,
+    fontSize: fontSizes.xxxl,
     fontWeight: "700",
   },
   caption: {
-    fontSize: 16,
-    color: "#555555",
+    color: colors.text,
+    fontSize: fontSizes.lg,
     textAlign: "center",
   },
 });

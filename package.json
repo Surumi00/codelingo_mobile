@@ -12,6 +12,7 @@
     "eslint-plugin-prettier": "^5.5.7",
     "eslint-plugin-react-refresh": "^0.5.7",
     "expo": "~57.0.0",
+    "expo-linear-gradient": "~57.0.2",
     "expo-secure-store": "~57.0.4",
     "expo-status-bar": "~57.0.1",
     "prettier": "^3.9.10",
