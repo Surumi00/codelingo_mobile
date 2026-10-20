@@ -1,12 +1,19 @@
 export const colors = {
   bg: "#09070f",
   surface: "#0d0a14",
+  surfaceRaised: "#1f1d29",
   border: "#292335",
+  borderStrong: "#4b415c",
   accent: "#8c4ff2",
   accentDark: "#7438d8",
+  accentSoft: "#c5a5ff",
+  accentMuted: "#8c4ff240",
   text: "#aaa2bd",
   textStrong: "#f7f4ff",
   onAccent: "#ffffff",
+  danger: "#ff8f8f",
+  success: "#86efac",
+  warning: "#fde047",
 } as const;
 
 export const gradients = {
