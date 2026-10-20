@@ -1,0 +1,238 @@
+import { StyleSheet } from "react-native";
+
+import { colors, fontSizes, radii, spacing } from "@/theme";
+
+export const syllabusStyles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: colors.bg,
+  },
+  content: {
+    alignItems: "center",
+    padding: spacing.lg,
+    paddingBottom: spacing.xxl,
+  },
+  shell: {
+    width: "100%",
+    maxWidth: 1040,
+    gap: spacing.lg,
+  },
+  centered: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    padding: spacing.lg,
+  },
+  stateCard: {
+    width: "100%",
+    maxWidth: 620,
+    alignItems: "center",
+    gap: spacing.md,
+    paddingVertical: spacing.xxl,
+    paddingHorizontal: spacing.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.md,
+    backgroundColor: colors.surface,
+  },
+  stateTitle: {
+    color: colors.textStrong,
+    fontSize: fontSizes.xxxl,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+  stateText: {
+    color: colors.text,
+    fontSize: fontSizes.lg,
+    lineHeight: 24,
+    textAlign: "center",
+  },
+  tabsRow: {
+    gap: spacing.md,
+    paddingVertical: spacing.xs,
+  },
+  tab: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    minHeight: 38,
+    paddingHorizontal: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.borderStrong,
+    borderRadius: radii.md,
+    backgroundColor: colors.surfaceRaised,
+  },
+  tabActive: {
+    borderColor: colors.accentSoft,
+    backgroundColor: colors.accentMuted,
+  },
+  tabNumber: {
+    color: colors.text,
+    fontSize: fontSizes.sm,
+    fontWeight: "800",
+  },
+  tabNumberActive: {
+    color: colors.accentSoft,
+  },
+  tabName: {
+    color: colors.textStrong,
+    fontSize: fontSizes.md,
+    fontWeight: "700",
+  },
+  tabStar: {
+    color: colors.accentSoft,
+    fontSize: fontSizes.sm,
+  },
+  levelCard: {
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.lg,
+    backgroundColor: colors.surface,
+    overflow: "hidden",
+  },
+  levelHeader: {
+    gap: spacing.sm,
+    padding: spacing.lg,
+  },
+  levelBadges: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+    flexWrap: "wrap",
+  },
+  levelTag: {
+    paddingVertical: spacing.xs,
+    paddingHorizontal: spacing.md,
+    borderWidth: 1,
+    borderColor: colors.accentSoft,
+    borderRadius: radii.pill,
+  },
+  levelTagText: {
+    color: colors.onAccent,
+    fontSize: fontSizes.xs,
+    fontWeight: "800",
+    letterSpacing: 1.2,
+  },
+  recommendedBadge: {
+    paddingVertical: spacing.xs,
+    paddingHorizontal: spacing.md,
+    borderRadius: radii.pill,
+    backgroundColor: colors.textStrong,
+  },
+  recommendedBadgeText: {
+    color: colors.accentDark,
+    fontSize: fontSizes.xs,
+    fontWeight: "800",
+  },
+  levelTitle: {
+    color: colors.onAccent,
+    fontSize: fontSizes.xxxl,
+    fontWeight: "800",
+  },
+  levelBody: {
+    gap: spacing.lg,
+    padding: spacing.lg,
+  },
+  levelDescription: {
+    color: colors.text,
+    fontSize: fontSizes.md,
+    lineHeight: 22,
+  },
+  inlineEmpty: {
+    alignItems: "center",
+    gap: spacing.sm,
+    padding: spacing.xl,
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.md,
+    backgroundColor: colors.surfaceRaised,
+  },
+  topicsRow: {
+    gap: spacing.md,
+    paddingVertical: spacing.xs,
+  },
+  topicCard: {
+    width: 136,
+    alignItems: "center",
+    gap: spacing.sm,
+  },
+  topicVisual: {
+    width: "100%",
+    height: 84,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: colors.border,
+    borderRadius: radii.md,
+    backgroundColor: colors.surfaceRaised,
+  },
+  topicVisualSelected: {
+    borderColor: colors.accentSoft,
+    backgroundColor: colors.accentMuted,
+  },
+  topicGlyph: {
+    color: colors.textStrong,
+    fontSize: 30,
+    fontWeight: "800",
+  },
+  topicLabel: {
+    color: colors.textStrong,
+    fontSize: fontSizes.sm,
+    fontWeight: "700",
+    textAlign: "center",
+  },
+  topicDetail: {
+    gap: spacing.md,
+    padding: spacing.lg,
+    borderWidth: 1,
+    borderColor: colors.borderStrong,
+    borderRadius: radii.md,
+    backgroundColor: colors.surfaceRaised,
+  },
+  detailIcon: {
+    width: 64,
+    height: 64,
+    alignSelf: "center",
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: colors.borderStrong,
+    borderRadius: radii.md,
+    backgroundColor: colors.surface,
+  },
+  detailGlyph: {
+    color: colors.textStrong,
+    fontSize: 26,
+    fontWeight: "800",
+  },
+  detailTitle: {
+    color: colors.textStrong,
+    fontSize: fontSizes.xl,
+    fontWeight: "800",
+    textAlign: "center",
+  },
+  detailList: {
+    gap: spacing.sm,
+  },
+  detailRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: spacing.sm,
+  },
+  detailDot: {
+    width: 7,
+    height: 7,
+    borderRadius: radii.pill,
+    backgroundColor: colors.accentSoft,
+  },
+  detailConcept: {
+    flexShrink: 1,
+    color: colors.textStrong,
+    fontSize: fontSizes.md,
+  },
+  detailEmpty: {
+    color: colors.text,
+    fontSize: fontSizes.md,
+    lineHeight: 22,
+  },
+});

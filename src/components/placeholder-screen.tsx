@@ -1,14 +1,24 @@
+import type { ReactNode } from "react";
 import { StyleSheet, Text, View } from "react-native";
 
 import { colors, fontSizes, spacing } from "@/theme";
 
-export function PlaceholderScreen() {
+export type PlaceholderScreenProps = {
+  title?: string;
+  caption?: string;
+  children?: ReactNode;
+};
+
+export function PlaceholderScreen({
+  title = "CodeLingo",
+  caption = "Placeholder screen.",
+  children,
+}: PlaceholderScreenProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>CodeLingo</Text>
-      <Text style={styles.caption}>
-        Project setup complete. Placeholder screen.
-      </Text>
+      <Text style={styles.title}>{title}</Text>
+      <Text style={styles.caption}>{caption}</Text>
+      {children}
     </View>
   );
 }
